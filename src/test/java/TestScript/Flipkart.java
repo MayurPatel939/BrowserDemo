@@ -1,6 +1,7 @@
 package TestScript;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -19,8 +20,13 @@ public class Flipkart {
 		
 		WebDriverManager.chromedriver().setup();
 		
-		
 		WebDriver driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+		
 		
 		//lunck flipkart application
 		driver.get("https://www.flipkart.com/");
@@ -35,24 +41,27 @@ public class Flipkart {
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		
 		//click in mobiles from catagories
-		driver.findElement(By.xpath("//a[@href='/mobiles/pr?sid=tyy,4io&q=Samsung+Galaxy+S10&otracker=categorytree']")).click();
+		driver.findElement(By.xpath("//a[@title='Mobiles & Accessories']|//a[@class='_1jJQdf _2Mji8F']")).click();
 		
-		//apply filter for brand : samsung 
-		WebElement clickOnSamsung = driver.findElement(By.xpath("(//div[contains(@class,'_3879cV')])[8]"));
-		
-		JavascriptExecutor samsung = (JavascriptExecutor) driver;
-		samsung.executeScript("arguments[0].click()", clickOnSamsung);
-		
-		Thread.sleep(3000);
+		driver.findElement(By.xpath("(//a[@title='Mobiles']|//a[@class='_2SqgSY'])[1]")).click();
+
 		//apply filter for Select Flipkart assured
 		WebElement clickOnflipkartAssured = driver.findElement(By.xpath("//div[@class='_24_Dny _3tCU7L']"));
-		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", clickOnflipkartAssured);
 		
+		//apply filter for brand samsung
+		WebElement clickOnSamsung = driver.findElement(By.xpath("//div[@class='_3879cV'][normalize-space()='SAMSUNG']"));
+		js.executeScript("arguments[0].click()", clickOnSamsung);
 		
-		//Sort the entries with Price -> High to Low.
-		driver.findElement(By.xpath("//div[contains(text(),'Price -- High to Low')]")).click();
+		
+		try {
+			//Sort the entries with Price -> High to Low.
+			driver.findElement(By.xpath("//div[contains(text(),'Price -- High to Low')]")).click();
+		} catch (StaleElementReferenceException e) {
+			
+			driver.findElement(By.xpath("//div[contains(text(),'Price -- High to Low')]")).click();
+		}
 		
 		//Read the set of results that show up on page 1.
 		List <WebElement> productName = driver.findElements(By.xpath("//div[contains(@class,'_4rR01T')]"));
@@ -81,6 +90,7 @@ public class Flipkart {
 		String pageURL = driver.getCurrentUrl();
 		
 		System.out.println(" \n Product Page URL : " +pageURL);
+		
 		
 		driver.quit();
 
