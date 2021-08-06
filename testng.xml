@@ -3,9 +3,9 @@
 <suite name="Suite">
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="TestScript.Flipkart" />
-			<!-- <class name="TestScript.EdgeDemo" /> -->
-			<!-- <class name="TestScript.LoginTest" /> -->
+			<!--<class name="TestScript.Flipkart" />  -->
+			 <class name="TestScript.EdgeDemo" /> 
+			 <class name="TestScript.LoginTest" /> 
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

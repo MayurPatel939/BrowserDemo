@@ -2,18 +2,18 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="155274" started-at="2021-08-06T11:05:29 IST" finished-at="2021-08-06T11:08:04 IST">
+  <suite name="Suite" duration-ms="85070" started-at="2021-08-06T17:39:11 IST" finished-at="2021-08-06T17:40:36 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="155274" started-at="2021-08-06T11:05:29 IST" finished-at="2021-08-06T11:08:04 IST">
+    <test name="Test" duration-ms="85070" started-at="2021-08-06T17:39:11 IST" finished-at="2021-08-06T17:40:36 IST">
       <class name="TestScript.EdgeDemo">
-        <test-method status="PASS" signature="EdgeBrowser()[pri:0, instance:TestScript.EdgeDemo@4e1d422d]" name="EdgeBrowser" duration-ms="119505" started-at="2021-08-06T11:05:29 IST" finished-at="2021-08-06T11:07:28 IST">
+        <test-method status="PASS" signature="EdgeBrowser()[pri:0, instance:TestScript.EdgeDemo@4e1d422d]" name="EdgeBrowser" duration-ms="63181" started-at="2021-08-06T17:39:11 IST" finished-at="2021-08-06T17:40:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EdgeBrowser -->
       </class> <!-- TestScript.EdgeDemo -->
       <class name="TestScript.LoginTest">
-        <test-method status="FAIL" signature="ValidateTextBox()[pri:0, instance:TestScript.LoginTest@66480dd7]" name="ValidateTextBox" duration-ms="35641" started-at="2021-08-06T11:07:28 IST" finished-at="2021-08-06T11:08:04 IST">
+        <test-method status="FAIL" signature="ValidateTextBox()[pri:0, instance:TestScript.LoginTest@66480dd7]" name="ValidateTextBox" duration-ms="21798" started-at="2021-08-06T17:40:15 IST" finished-at="2021-08-06T17:40:36 IST">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[Timed out waiting for driver server to start.
@@ -68,7 +68,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter
 at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
-Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:35235/status] to be available after 20001 ms
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:19787/status] to be available after 20000 ms
 at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
 at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:197)
 ... 41 more

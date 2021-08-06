@@ -1,15 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 157.373 s <<< FAILURE! - in TestSuite
-TestScript.LoginTest.ValidateTextBox  Time elapsed: 35.677 s  <<< FAILURE!
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 86.677 s <<< FAILURE! - in TestSuite
+TestScript.LoginTest.ValidateTextBox  Time elapsed: 21.792 s  <<< FAILURE!
 org.openqa.selenium.WebDriverException: 
 Timed out waiting for driver server to start.
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-FF98F7V', ip: '192.168.43.128', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: driver.version: ChromeDriver
 	at TestScript.LoginTest.ValidateTextBox(LoginTest.java:18)
-Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:35235/status] to be available after 20001 ms
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:19787/status] to be available after 20000 ms
 	at TestScript.LoginTest.ValidateTextBox(LoginTest.java:18)
 Caused by: java.util.concurrent.TimeoutException
 	at TestScript.LoginTest.ValidateTextBox(LoginTest.java:18)
